@@ -1,0 +1,88 @@
+.home-view-container
+    max-width: 600px
+    margin: auto
+    text-align: left
+    padding: 30px
+    //border: 1px solid $gray-color
+    border-radius: 5px
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    &__row
+        display: flex
+        margin-bottom: 10px
+        &-left
+            min-width: 120px
+            margin: 0
+            .passenger-count-text
+                color: darkcyan
+                font-weight: bold
+                font-size: 18px
+            .passenger-total__count
+                font-weight: bold
+                font-size: 20px
+        &-right
+            margin: 0
+            select,
+            input
+                height: 40px
+                min-width: 400px
+        
+        input[type="radio"]
+            width: 20px
+            height: 20px
+
+        &-direction
+            display: flex
+            margin-right: 20px
+            span
+                margin-left: 5px
+                margin-top: 5px
+
+        .required-message
+            color: red
+
+    &__error-message
+        color: red
+
+    .search-btn
+        background-color: $green-color
+        border: none
+        border-radius: 5px
+        color: white
+        height: 40px;
+        width: 100px
+        &:hover
+            background-color: $blue-color
+            cursor: pointer
+
+    &__passenger
+        display: flex
+        margin-bottom: 5px
+        input
+            width: 20px
+            height: 20px
+            margin: 0 2px
+        &-adults,
+        &-children,
+        &-infant
+            margin-right: 10px
+            padding: 5px
+            background: lightblue
+
+// for mobile
+@media only screen and (max-width: 767px)
+    .home-view-container
+        max-width: 100%
+        &__row
+            display: block;
+            &-left
+                font-size: 18px
+                margin-bottom: 5px
+            &-right
+                margin-top: 2%
+                input,
+                select
+                    min-width: 100%
+    .travel-direction
+        display: flex
+

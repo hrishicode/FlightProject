@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <HeaderSection message="Flight Search" />
     <router-view/>
   </div>
 </template>
+
+<script>
+import HeaderSection from '@/components/HeaderSection.vue'
+
+export default {
+  components: {
+    HeaderSection
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

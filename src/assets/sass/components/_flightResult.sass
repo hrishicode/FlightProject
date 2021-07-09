@@ -1,0 +1,58 @@
+.flight-results
+    //border: 1px solid $gray-color
+    border-radius: 5px
+    width: 500px
+    text-align: left
+    margin: auto
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    &__row
+        margin-bottom: 5px
+        display: flex
+        &-left
+            width: 130px
+            font-weight: bold
+            font-size: 18px
+
+    .passenger
+        > div
+            &:first-child
+                margin: 10px 0;
+                font-size: 24px;
+                font-weight: bold;
+        .passenger-cards
+            display: flex
+            &__item
+                display: flex
+                justify-content: space-around
+                flex-flow: column
+                align-items: center
+                min-height: 50px
+                min-width: 20%
+                margin-right: 2%
+                padding: 10px
+                background: deepskyblue
+                border-radius: 5px
+                color: white
+                font-size: 18px
+                &:last-child
+                    background: green
+            
+// for mobile devices
+@media only screen and (max-width: 767px)
+    .flight-results
+        width: 90%;
+        &__row
+            display: block
+            &-left
+                font-size: 16px
+            &-right
+                font-size: 14px
+        .passenger
+            .passenger-cards
+                justify-content: space-between;
+                flex-wrap: wrap
+                .passenger-cards__item
+                    margin-bottom: 5px
+                    width: 40%
+                    min-width: auto
